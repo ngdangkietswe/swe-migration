@@ -33,4 +33,4 @@ jobs:
         run: |
           chmod +x ./script/migrate_prod.sh
             ./script/migrate_prod.sh
-          shell: bash
+        shell: bash
