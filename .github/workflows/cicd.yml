@@ -30,6 +30,10 @@ jobs:
           DB_AUTH_HOST: ${{ secrets.DB_AUTH_HOST }}
           DB_AUTH_USER: ${{ secrets.DB_AUTH_USER }}
           DB_AUTH_PASS: ${{ secrets.DB_AUTH_PASS }}
+
+          DB_TASK_HOST: ${{ secrets.DB_TASK_HOST }}
+          DB_TASK_USER: ${{ secrets.DB_TASK_USER }}
+          DB_TASK_PASS: ${{ secrets.DB_TASK_PASS }}
         run: |
           chmod +x ./script/migrate_prod.sh
             ./script/migrate_prod.sh
