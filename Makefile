@@ -10,3 +10,8 @@ migrate-task:
 	mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_task.conf
 repair-task:
 	mvn flyway:repair -Dflyway.configFiles=config/local/flyway_task.conf
+
+migrate-integration:
+	mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_integration.conf
+repair-integration:
+	mvn flyway:repair -Dflyway.configFiles=config/local/flyway_integration.conf
