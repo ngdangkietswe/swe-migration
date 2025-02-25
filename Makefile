@@ -15,3 +15,8 @@ migrate-integration:
 	mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_integration.conf
 repair-integration:
 	mvn flyway:repair -Dflyway.configFiles=config/local/flyway_integration.conf
+
+migrate-timetracking:
+	mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_timetracking.conf
+repair-timetracking:
+	mvn flyway:repair -Dflyway.configFiles=config/local/flyway_timetracking.conf
