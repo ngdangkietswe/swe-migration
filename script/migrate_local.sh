@@ -9,3 +9,6 @@ mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_integration.conf
 
 echo "Migrating timetracking database ..."
 mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_timetracking.conf
+
+echo "Migrating notification database ..."
+mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_notification.conf

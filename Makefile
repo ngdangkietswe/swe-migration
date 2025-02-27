@@ -20,3 +20,8 @@ migrate-timetracking:
 	mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_timetracking.conf
 repair-timetracking:
 	mvn flyway:repair -Dflyway.configFiles=config/local/flyway_timetracking.conf
+
+migrate-notification:
+	mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_notification.conf
+repair-notification:
+	mvn flyway:repair -Dflyway.configFiles=config/local/flyway_notification.conf
