@@ -25,3 +25,8 @@ migrate-notification:
 	mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_notification.conf
 repair-notification:
 	mvn flyway:repair -Dflyway.configFiles=config/local/flyway_notification.conf
+
+migrate-workflow:
+	mvn flyway:migrate -Dflyway.configFiles=config/local/flyway_workflow.conf
+repair-workflow:
+	mvn flyway:repair -Dflyway.configFiles=config/local/flyway_workflow.conf

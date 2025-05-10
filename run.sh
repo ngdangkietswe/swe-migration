@@ -5,6 +5,9 @@ echo "Select a service:"
 echo "1. auth"
 echo "2. task"
 echo "3. integration"
+echo "4. time-tracking"
+echo "5. notification"
+echo "6. workflow"
 # shellcheck disable=SC2162
 read -p "Enter the number for the service: " SERVICE_NUM
 
@@ -13,6 +16,9 @@ declare -A SERVICES=(
   [1]="auth"
   [2]="task"
   [3]="integration"
+  [4]="time-tracking"
+  [5]="notification"
+  [6]="workflow"
 )
 
 # Validate the selected service
@@ -71,7 +77,7 @@ mvn flyway:"$ACTION" -Dflyway.configFiles=config/"$ENV"/flyway_"$SERVICE".conf
 # Check the result of the Flyway command
 # shellcheck disable=SC2181
 if [ $? -eq 0 ]; then
-  echo "$ACTION for $SERVICE in $ENV environment was successful."
+  echo "Successfully $ACTION for $SERVICE in $ENV environment."
 else
   echo "Failed to $ACTION for $SERVICE in $ENV environment."
   exit 1
